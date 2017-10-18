@@ -9,12 +9,12 @@ usage
 	$ npm i quick-static -g
 	
 	$ quick-static 
-<span style="color:#ccc">// serve the current directory on http://localhost:8000</span>
+	// serve the current directory on http://localhost:8000
 	
 	$ quick-static ./public 12345 
-<span style="color:#ccc">// serve the folder 'public' from the current directory on http://localhost:12345</span>
+	// serve the folder 'public' from the current directory on http://localhost:12345
 	
 	$ quic-static /an/absolute/path 6666 
-<span style="color:#ccc">// serve a absolute folder on http://localhost:6666</span>
+	// serve a absolute folder on http://localhost:6666
 
 
