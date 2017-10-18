@@ -17,7 +17,7 @@ usage
 	$ quick-static ./public 12345 
 	// serve the folder 'public' from the current directory on http://localhost:12345
 	
-	$ quic-static /an/absolute/path 6666 
+	$ quick-static /an/absolute/path 6666 
 	// serve a absolute folder on http://localhost:6666
 
 
