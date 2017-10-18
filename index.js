@@ -1,23 +1,22 @@
 #!/usr/bin/env node
 
+
+
+// references:
+// https://bretkikehara.wordpress.com/2013/05/02/nodejs-creating-your-first-global-module/
+
+
+
 const express = require('express')
 const serveIndex = require('serve-index')
 const path = require('path')
 const fs = require('fs')
 const chalk = require('chalk')
 
-const args = process.argv.slice(2).reduce((acc, arg) => {
-
-    let [k, v = true] = arg.split('=')
-    acc[k] = v
-    return acc
-
-}, {})
-
 let [port = 8000] = process.argv.slice(2).filter(v => /\d+/.test(v)).map(parseFloat)
 let [dir = '.'] = process.argv.slice(2).filter(v => /\.|\//.test(v))
 
-dir = path.join(process.cwd(), dir)
+dir = path.resolve(process.cwd(), dir)
 
 if (!fs.existsSync(dir)) {
 
