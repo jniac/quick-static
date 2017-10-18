@@ -6,7 +6,7 @@ Very small wrapper around [express](https://github.com/expressjs/express) & [ser
 
 usage
 ---
-```sh
+```js
 $ npm i quick-static -g
 
 $ quick-static 
@@ -17,6 +17,6 @@ $ quick-static ./public 12345
 
 $ quic-static /an/absolute/path 6666 
 // will serve a absolute folder on http://localhost:6666
-```
+``
 
 
