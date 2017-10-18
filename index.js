@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const express = require('express')
 const serveIndex = require('serve-index')
 const path = require('path')

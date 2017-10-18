@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "quick-static": "bin/quick-static.js"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Joseph Merdrignac",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
