@@ -1,13 +1,16 @@
 serve static files
-===
+---
 
 Serve static files from Command Line Interface
 Very small wrapper around [express](https://github.com/expressjs/express) & [serve-index](https://github.com/expressjs/serve-index)
+Colored logs powered by [chalk](https://github.com/chalk/chalk)
+
+install
+---
+	$ npm i quick-static -g
 
 usage
 ---
-	$ npm i quick-static -g
-	
 	$ quick-static 
 	// serve the current directory on http://localhost:8000
 	
