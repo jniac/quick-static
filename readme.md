@@ -6,20 +6,15 @@ Very small wrapper around [express](https://github.com/expressjs/express) & [ser
 
 usage
 ---
-```sh
-$ npm i quick-static -g
-
-$ quick-static ```
-// will serve the current directory on http://localhost:8000
-
-```sh
-$ quick-static ./public 12345 
-```
-// will serve the folder 'public' from the current directory on http://localhost:12345
-
-```sh
-$ quic-static /an/absolute/path 6666 
-```
-// will serve a absolute folder on http://localhost:6666
+	$ npm i quick-static -g
+	
+	$ quick-static 
+	// serve the current directory on http://localhost:8000
+	
+	$ quick-static ./public 12345 
+	// serve the folder 'public' from the current directory on http://localhost:12345
+	
+	$ quic-static /an/absolute/path 6666 
+	// serve a absolute folder on http://localhost:6666
 
 
