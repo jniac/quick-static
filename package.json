@@ -1,19 +1,21 @@
 {
   "name": "quick-static",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "quick-static": "bin/quick-static.js"
+    "quick-static": "index.js"
   },
   "keywords": [],
   "author": "Joseph Merdrignac",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.2.0",
     "express": "^4.16.2",
     "serve-index": "^1.9.1"
-  }
+  },
+  "preferGlobal": "true"
 }
