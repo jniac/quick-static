@@ -13,6 +13,14 @@ const path = require('path')
 const fs = require('fs')
 const chalk = require('chalk')
 
+const args = process.argv.slice(2).reduce((acc, arg) => {
+
+	let [k, v] = arg.split('=')
+	acc[k] = v === undefined ? true : /true|false/.test(v) ? v === 'true' : /\d+/.test(v) ? Number(v) : v
+	return acc
+
+}, {})
+
 let [port = 8000] = process.argv.slice(2).filter(v => /\d+/.test(v)).map(parseFloat)
 let [dir = '.'] = process.argv.slice(2).filter(v => /\.|\//.test(v))
 
@@ -24,31 +32,53 @@ if (!fs.existsSync(dir)) {
 	process.exit()
 
 }
+
+console.log('quick-static:')
+
 	
 
 let app = express()
 
 app.use('/', express.static(dir), serveIndex(dir, {'icons': true}))
 
-app.listen(port, () => {
+function tryServer() {
 
-	let localhost = `http://localhost:${port}`
+	app.listen(port, () => {
 
-	console.log('quick-static:')
-	console.log(`    serving ${chalk.blue(dir)}`)
-	console.log(`    over ${chalk.red(localhost)}`)
+		let localhost = `http://localhost:${port}`
 
-}).on('error', e => {
+		console.log(`    serving ${chalk.blue(dir)}`)
+		console.log(`    over ${chalk.red(localhost)}`)
 
-	if (e.code === 'EADDRINUSE') {
+	}).on('error', e => {
 
-		console.log(chalk.red(`oups! the port ${port} is already in use!`))
+		if (e.code === 'EADDRINUSE') {
 
-	} else {
+			if (args.auto) {
+				
+				console.log(`    (auto) the port ${port} is already used...`)
+				
+				port++
 
-		console.log(e)
+				if (port < 65536)
+					tryServer()
 
-	}
+			} else {
 
-})
+				console.log(chalk.red(`    oups! the port ${port} is already in use!`))
+
+			}
+
+		} else {
+
+			console.log(e)
+
+		}
+
+	})
+	
+}
+
+tryServer()
+
 

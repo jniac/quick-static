@@ -9,7 +9,7 @@
   "bin": {
     "quick-static": "index.js"
   },
-  "keywords": [],
+  "keywords": ["express", "serve-index", "local static server", "http", "cli"],
   "author": "Joseph Merdrignac",
   "license": "ISC",
   "dependencies": {

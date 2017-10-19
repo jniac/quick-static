@@ -20,4 +20,9 @@ usage
 	$ quick-static /an/absolute/path 6666 
 	// serve a absolute folder on http://localhost:6666
 
+	$ quick-static . 4000 auto
+	// serve current directory on http://localhost:4000
+	// if the port 4000 is not available, 
+	// will search for the next available port
+
 
