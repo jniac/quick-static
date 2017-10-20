@@ -25,4 +25,8 @@ usage
 	// if the port 4000 is not available, 
 	// will search for the next available port
 
+![alt text](https://github.com/jniac/quick-static/blob/master/public/img/screen-log-auto.png)
+
+
+
 
