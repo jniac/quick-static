@@ -22,7 +22,7 @@ Colored logs powered by [chalk](https://github.com/chalk/chalk)
 	// if the port 4000 is not available, 
 	// will search for the next available port
 
-![screenshot](https://github.com/jniac/quick-static/blob/master/public/img/screen-log-auto.png)
+![screenshot](https://raw.githubusercontent.com/jniac/quick-static/master/public/img/screen-log-auto.png)
 
 
 
