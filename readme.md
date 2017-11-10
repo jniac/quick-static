@@ -2,7 +2,9 @@
 Serve static files over http from Command Line Interface  
 
 Very small wrapper around [express](https://github.com/expressjs/express) & [serve-index](https://github.com/expressjs/serve-index)  
-Colored logs powered by [chalk](https://github.com/chalk/chalk)  
+Colored logs powered by [colors](https://www.npmjs.com/package/colors)  
+
+For a more powerfull static server, able to compile and deliver pug & sass on the fly, see [super-quick-static](https://github.com/jniac/super-quick-static) [(@npm)](https://www.npmjs.com/package/super-quick-static)
 
 ### install
 	$ npm i quick-static -g

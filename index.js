@@ -6,12 +6,12 @@
 // https://bretkikehara.wordpress.com/2013/05/02/nodejs-creating-your-first-global-module/
 
 
+require('colors')
 
 const express = require('express')
 const serveIndex = require('serve-index')
 const path = require('path')
 const fs = require('fs')
-const chalk = require('chalk')
 
 const args = process.argv.slice(2).reduce((acc, arg) => {
 
@@ -28,7 +28,7 @@ dir = path.resolve(process.cwd(), dir)
 
 if (!fs.existsSync(dir)) {
 
-	console.log(`${chalk.red(dir)} is not a valid folder`)
+	console.log(`${dir.red} is not a valid folder`)
 	process.exit()
 
 }
@@ -47,8 +47,8 @@ function tryServer() {
 
 		let localhost = `http://localhost:${port}`
 
-		console.log(`    serving ${chalk.blue(dir)}`)
-		console.log(`    over ${chalk.red(localhost)}`)
+		console.log(`    serving ${dir.blue}`)
+		console.log(`    over ${localhost.red}`)
 
 	}).on('error', e => {
 
@@ -65,7 +65,7 @@ function tryServer() {
 
 			} else {
 
-				console.log(chalk.red(`    oups! the port ${port} is already in use!`))
+				console.log(`    oups! the port ${port} is already in use!`.red)
 
 			}
 
