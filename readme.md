@@ -1,5 +1,6 @@
 # serve static files
-Serve static files over http from Command Line Interface  
+Serve static files over http from Command Line Interface 
+[npm](https://www.npmjs.com/package/quick-static)
 
 Very small wrapper around [express](https://github.com/expressjs/express) & [serve-index](https://github.com/expressjs/serve-index)  
 Colored logs powered by [colors](https://www.npmjs.com/package/colors)  
